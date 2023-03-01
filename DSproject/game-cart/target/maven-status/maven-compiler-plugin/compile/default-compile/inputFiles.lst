@@ -1,0 +1,11 @@
+/Users/rishabhmer/Desktop/DS/distributed-system-project/DSproject/game-cart/src/main/java/com/dsproject/gamecart/service/GameOrderService.java
+/Users/rishabhmer/Desktop/DS/distributed-system-project/DSproject/game-cart/src/main/java/com/dsproject/gamecart/repository/GameRepository.java
+/Users/rishabhmer/Desktop/DS/distributed-system-project/DSproject/game-cart/src/main/java/com/dsproject/gamecart/model/GameOrders.java
+/Users/rishabhmer/Desktop/DS/distributed-system-project/DSproject/game-cart/src/main/java/com/dsproject/gamecart/dto/StockResponse.java
+/Users/rishabhmer/Desktop/DS/distributed-system-project/DSproject/game-cart/src/main/java/com/dsproject/gamecart/GameOrderServiceApplication.java
+/Users/rishabhmer/Desktop/DS/distributed-system-project/DSproject/game-cart/src/main/java/com/dsproject/gamecart/event/GameOrderPlaced.java
+/Users/rishabhmer/Desktop/DS/distributed-system-project/DSproject/game-cart/src/main/java/com/dsproject/gamecart/dto/GameOrderLineItemsDto.java
+/Users/rishabhmer/Desktop/DS/distributed-system-project/DSproject/game-cart/src/main/java/com/dsproject/gamecart/config/GameConfig.java
+/Users/rishabhmer/Desktop/DS/distributed-system-project/DSproject/game-cart/src/main/java/com/dsproject/gamecart/dto/GameRequest.java
+/Users/rishabhmer/Desktop/DS/distributed-system-project/DSproject/game-cart/src/main/java/com/dsproject/gamecart/model/Order.java
+/Users/rishabhmer/Desktop/DS/distributed-system-project/DSproject/game-cart/src/main/java/com/dsproject/gamecart/controller/OrderController.java

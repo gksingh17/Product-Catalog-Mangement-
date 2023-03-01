@@ -1,0 +1,7 @@
+/Users/rishabhmer/Desktop/DS/distributed-system-project/DSproject/game-service/src/main/java/com/dsproject/gameservice/domainmodel/Game.java
+/Users/rishabhmer/Desktop/DS/distributed-system-project/DSproject/game-service/src/main/java/com/dsproject/gameservice/service/GameService.java
+/Users/rishabhmer/Desktop/DS/distributed-system-project/DSproject/game-service/src/main/java/com/dsproject/gameservice/GameServiceApplication.java
+/Users/rishabhmer/Desktop/DS/distributed-system-project/DSproject/game-service/src/main/java/com/dsproject/gameservice/controller/datatransferobject/GameRequest.java
+/Users/rishabhmer/Desktop/DS/distributed-system-project/DSproject/game-service/src/main/java/com/dsproject/gameservice/repository/GameRepository.java
+/Users/rishabhmer/Desktop/DS/distributed-system-project/DSproject/game-service/src/main/java/com/dsproject/gameservice/controller/GameController.java
+/Users/rishabhmer/Desktop/DS/distributed-system-project/DSproject/game-service/src/main/java/com/dsproject/gameservice/controller/datatransferobject/GameResponse.java

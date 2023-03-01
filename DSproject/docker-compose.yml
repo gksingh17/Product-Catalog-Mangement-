@@ -1,0 +1,100 @@
+---
+
+# mongo:
+#  container_name: mongo
+#  image: mongo:4.4.14-rc0-focal
+#  restart: always
+#  ports:
+#    - "27017:27017"
+#  expose:
+#    - "27017"
+#  volumes:
+#    - ./mongo-data:/data/db
+
+# server-locator:
+#  image:server-locator:latest
+#  container_name: server-locator
+#  ports:
+#    - "8761:8761"
+#
+# gateway-server:
+#  image: gateway-server
+#  container_name: gateway-server
+#  ports:
+#    - "8181:8080"
+#  expose:
+#    - "8181"
+#  depends_on:
+#    - server-locator
+#
+
+### Game-Service
+# game-service:
+#  container_name: game-service
+#  image: game-service:latest
+#  depends_on:
+#    - mongo
+#    - server-locator
+#    - gateway-server
+#
+### Game-Cart
+#game-cart:
+#  container_name: game-cart
+#  image: game-cart:latest
+#  depends_on:
+#    - broker
+#    - zipkin
+#    - server-locator
+#    - gateway-server
+#
+### Game Library
+#game-library:
+#  container_name: game-library
+#  image: game-library:latest
+#  depends_on:
+#    - server-locator
+#    - gateway-server
+#
+### Order Alert Service
+#orderalertservice:
+#  container_name: order-alert-service
+#  image: order-alert-service:latest
+#  depends_on:
+#    - zipkin
+#    - broker
+#    - server-locator
+#    - gateway-server
+
+
+version: '3'
+services:
+  zookeeper:
+    # Zookeeper to orchestrate kafka clusters
+    image: confluentinc/cp-zookeeper:7.3.0
+    container_name: zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      # Interval to send heartbeat message (2000 miliseconds)
+      ZOOKEEPER_TICK_TIME: 2000
+
+
+  # Apache kafka -> tag name broker
+  broker:
+    image: confluentinc/cp-kafka:7.3.0
+    container_name: broker
+    ports:
+      # To learn about configuring Kafka for access across networks see
+      # https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/
+      - "9092:9092"
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092,PLAINTEXT_INTERNAL://broker:29092
+      # using singe node
+
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
