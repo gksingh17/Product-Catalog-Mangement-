@@ -2,7 +2,7 @@
 
 ## This project is a distributed system designed for product catalog management, with a specific focus on game purchasing. It employs microservices for order processing and database storage, facilitates JSON data retrieval via Postman, and ensures data consistency through synchronous interprocess communication. The system also verifies game availability before orders and logs notifications for monitoring.
 
-## Steps to run the Project 
+## Installation
 Initially to run our project you need to have different applications installed on your computer system like:-
 - Docker
 - Postman
@@ -13,7 +13,7 @@ Initially to run our project you need to have different applications installed o
     - Run command ```brew install mysql```
 - Intellij/VS Code
 
-
+## How To Run
 - After installing the above applications you need to start the docker to run the zookeeper and kafka and the syntax to start the docker is
 
     ``` docker compose up -d ```
