@@ -1,6 +1,6 @@
 # Distributed System Project
 
-##This project is a distributed system designed for product catalog management, with a specific focus on game purchasing. It employs microservices for order processing and database storage, facilitates JSON data retrieval via Postman, and ensures data consistency through synchronous interprocess communication. The system also verifies game availability before orders and logs notifications for monitoring.
+## This project is a distributed system designed for product catalog management, with a specific focus on game purchasing. It employs microservices for order processing and database storage, facilitates JSON data retrieval via Postman, and ensures data consistency through synchronous interprocess communication. The system also verifies game availability before orders and logs notifications for monitoring.
 
 ## Steps to run the Project 
 Initially to run our project you need to have different applications installed on your computer system like:-
